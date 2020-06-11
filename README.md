@@ -7,7 +7,7 @@ Check if these points make a straight line in the XY plane.
 <br>
 ```csharp
 
-public static bool CheckStraightLine(int[,] coordinates){
+ public static bool CheckStraightLine(int[,] coordinates){
             List<Point> points = new List<Point>();
 
             int counter = 1;
@@ -34,9 +34,9 @@ public static bool CheckStraightLine(int[,] coordinates){
             double slop = 0;
             List<double> slopes = new List<double>();
             foreach (Point pointMaster in points){
-                foreach (Point pointDetay in points){
+                foreach (Point pointDetail in points){
                     try{
-                        slop = (pointMaster.Y - pointDetay.Y) / (pointMaster.X - pointDetay.X);
+                        slop = (pointMaster.Y - pointDetail.Y) / (pointMaster.X - pointDetail.X);
                         slopes.Add(slop);
                     }
                     catch (DivideByZeroException ex){
